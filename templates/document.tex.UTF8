@@ -1,0 +1,20 @@
+\documentclass{book}
+\usepackage[utf8x]{inputenc}
+\usepackage[paperwidth=5.5in, paperheight=8.5in, top=0.75in, bottom=0.75in, outer=0.50in, inner=0.75in]{geometry}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{fancyhdr}
+\usepackage{changepage}
+\graphicspath{ {/home/spenteco/1/pg_fastText/novel_process/templates/} }
+\renewcommand*\footnoterule{}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.5em}
+\begin{document}
+\pagenumbering{gobble}
+{\fontsize{10pt}{12pt}\fontfamily{ptm}\selectfont
+% for tex_page in tex_pages:
+${tex_page}
+% endfor
+}
+\end{document}

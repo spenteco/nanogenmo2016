@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="extras/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="extras/jquery.tablesorter.js"></script>
+<link rel="stylesheet" href="themes/blue/style.css" type="text/css"/>
+</head>
+<body>
+<table id="myTable" class="tablesorter"> 
+<thead> 
+<tr> 
+    <th>new author</th> 
+    <th>new title</th> 
+    <th># pages</th> 
+    <th>% changed</th> 
+    <th>id</th> 
+    <th>old author</th> 
+    <th>old title</th> 
+</tr> 
+</thead> 
+<tbody> 
+% for r in table_rows:
+<tr> 
+    <td><a href="${r[4]}.html">${r[0]}</a></td> 
+    <td><a href="${r[4]}.html"><i>${r[1]}</i></a></td> 
+    <td>${r[2]}</td> 
+    <td>${r[3]}</td> 
+    <td><a href="${r[4]}.html">${r[4]}</a></td> 
+    <td>${r[5]}</td> 
+    <td><i>${r[6]}</i></td> 
+</tr> 
+% endfor
+</tbody> 
+</table> 
+
+<script type="text/javascript">
+
+$(document).ready(
+    function() {
+        $('#myTable').tablesorter();
+    }
+);
+
+</script>
+
+</body>
+</html>
