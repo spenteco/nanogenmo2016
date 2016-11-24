@@ -14,6 +14,7 @@ from nplus_functions.fix_quotes import *
 from nplus_functions.fix_small_caps import *
 from nplus_functions.execute_command import *
 from nplus_functions.svg_from_pdf2xml import *
+from nplus_functions.colors import *
 
 def texts_to_web_output(text_folder, file_name, author_name_subs_folder, temp_folder, web_folder, template_folder, latex_folder, url_for_svg_images, is_digest):
     
@@ -72,10 +73,12 @@ def texts_to_web_output(text_folder, file_name, author_name_subs_folder, temp_fo
     if is_digest == True:
         title_font_size = '24px'
     
-    flipper_page = html_template.render(author_top='100', author_lines=name_lines, title_top=str(title_top), title_lines=title_lines, page_numbers=page_numbers, document_id=file_name.replace('.txt', ''), extra_page=extra_page, title_font_size=title_font_size)
+    color_number = str(colors[file_name]).rjust(2, '0')
+    
+    flipper_page = html_template.render(author_top='100', author_lines=name_lines, title_top=str(title_top), title_lines=title_lines, page_numbers=page_numbers, document_id=file_name.replace('.txt', ''), extra_page=extra_page, title_font_size=title_font_size, color_number=color_number)
     
     f = codecs.open(web_folder + file_name.replace('.txt', '.html'), 'w', encoding='utf-8')
     f.write(flipper_page)
     f.close()
     
-    execute_command('cd ' + temp_folder + '; rm ' + file_name.replace('.txt', '.*'))
+    #execute_command('cd ' + temp_folder + '; rm ' + file_name.replace('.txt', '.*'))

@@ -16,6 +16,13 @@ def fix_digest_paragraph(p, document_type):
             else:
                 if fixed_p[i - 1:i] == ' ':
                     fixed_p = fixed_p[:i] + '``' + fixed_p[i + 1:]
+        else:
+            if fixed_p[i:i + 1] == '\'':
+                if i == 0:
+                    fixed_p = '`' + fixed_p[1:]
+                else:
+                    if fixed_p[i - 1:i] == ' ':
+                        fixed_p = fixed_p[:i] + '`' + fixed_p[i + 1:]
 
     fixed_lines = []
 

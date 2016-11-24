@@ -2,7 +2,7 @@
 
 This is a variation on the Oulipo N+7 substitution scheme.  However, instead replacing nouns with with "next seventh" noun in the dictionary, I'm replacing nouns, proper nouns, adjectives and verbs (with a small number of exceptions) with one of several (usually one of 10 or 15) similar words derived from a word vector representation derived from the Project Gutenberg corpus.  I also try to coordinate substitutions in texts with substitutions in a corresponding set of summaries, and to maintain author name changes across texts.  Outputs are pdfs and "page flipper" web displays for both the texts and a catalog built from the collected summaries.
 
-For the finished product, please see [the project page on my website (http://robineggsky.com/posts/momogenmo.html).
+For the finished product, please see [the project page on my website] (http://robineggsky.com/posts/momogenmo.html).
 
 # Data preparation
 

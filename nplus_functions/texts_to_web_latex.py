@@ -41,8 +41,6 @@ def texts_to_web_latex(text_folder, file_name, author_name_subs_folder, temp_fol
         vspace_setting = 20.0
     if len(title_lines) == 2:
         vspace_setting = 10.0
-    if len(title_lines) == 3:
-        vspace_setting = 1.0
     
     title_for_tex = []
     for a in title_lines:
@@ -51,12 +49,16 @@ def texts_to_web_latex(text_folder, file_name, author_name_subs_folder, temp_fol
         title_for_tex.append(r'\linebreak')
         
     lines_after_byline = []
-    n_extra_lines = 5
-    if len(title_lines) == 3:
+    n_extra_lines = 0
+    if len(title_lines) == 1:
+        n_extra_lines = 3
+    if len(title_lines) == 2:
         n_extra_lines = 2
-    else:
-        if len(title_lines) > 3:
-            n_extra_lines = 1
+    if len(title_lines) == 3:
+        n_extra_lines = 1
+    #else:
+    #    if len(title_lines) > 3:
+    #        n_extra_lines = 0
     for a in range(0, n_extra_lines):
         lines_after_byline.append(r'\linebreak')
         

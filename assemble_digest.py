@@ -58,16 +58,18 @@ def summaries_to_tex(document_type):
     copyright_template = Template(filename=TEMPLATE_FOLDER + 'catalog_copyright.tex')
     header_and_footer_template = Template(filename=TEMPLATE_FOLDER + 'header_and_footer.tex')
     works_template = Template(filename=TEMPLATE_FOLDER + 'works.tex')
+    introduction_template = Template(filename=TEMPLATE_FOLDER + 'introduction.tex')
     
     if document_type == 'web':
         document_template = Template(filename=TEMPLATE_FOLDER + 'web.document.tex')
         header_and_footer_template = Template(filename=TEMPLATE_FOLDER + 'web.header_and_footer.tex')
         title_page_template = Template(filename=TEMPLATE_FOLDER + 'web.catalog_title_page.tex')
         works_template = Template(filename=TEMPLATE_FOLDER + 'web.works.tex')
+        introduction_template = Template(filename=TEMPLATE_FOLDER + 'web.introduction.tex')
     
     #   OUTPUT SUMMARIES
     
-    tex_body = [r'\newpage', r'\pagenumbering{arabic}', r'\pagestyle{fancy}', r'\fancyhf{}']
+    tex_body = [r'\newpage',]
     
     tex_body.append(r'\newpage')
     tex_body.append(r'\begin{center}')
@@ -140,6 +142,8 @@ def summaries_to_tex(document_type):
     tex_pages.append(title_page_template.render())
     tex_pages.append(copyright_template.render())
     tex_pages.append(blank_page_template.render())
+    tex_pages.append(blank_page_template.render())
+    tex_pages.append(introduction_template.render())
     tex_pages.append(blank_page_template.render())
     
     tex_pages.append('\n'.join(tex_body))
