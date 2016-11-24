@@ -15,7 +15,7 @@
 <body>
 
 <div style="width:50px;height:50px;position:absolute;top:30px;left:25px;">
-    <a href="../posts/momomgenmo.html"><img src="pics/home.png"/></a>
+    <a href="/posts/momogenmo.html"><img src="pics/home.png"/></a>
 </div>
 
 <div style="width:50px;height:53px;position:absolute;top:100px;left:20px;">
@@ -23,13 +23,13 @@
 </div>
 
 <div style="width:50px;height:53px;position:absolute;top:170px;left:25px;">
-    <a href="help.html"><img src="pics/help.png"/></a>
+    <a href="help/help.html"><img src="pics/help.png"/></a>
 </div>
 
 <div class="flipbook-viewport">
 	<div class="container">
 		<div class="flipbook">
-			<div class="hard" style="background-image:url(pics/front_cover_background_01.svg);">
+			<div class="hard" style="background-image:url(pics/front_cover_background_${color_number}.svg);">
         
 <div style="width:420px;color:#ffffff;font-size:32px;font-family:'Open Sans',sans-serif;text-align:center;position:relative;top:${author_top}px;left:20px">
 % for line in author_lines:
@@ -60,7 +60,7 @@ ${line}<br/>
                 <img src="pics/endpaper.jpg"/>
             </div>
             
-			<div class="hard" style="background-image:url(pics/back_cover_background_01.svg);">
+			<div class="hard" style="background-image:url(pics/back_cover_background_${color_number}.svg);">
             </div>
 		</div>
 	</div>
