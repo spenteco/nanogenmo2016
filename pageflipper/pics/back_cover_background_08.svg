@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="850">
 
-    <rect width="600" height="850" style="fill:#13192C;stroke-width:0;stroke:#13192C"/>
+    <rect width="600" height="850" style="fill:#354925;stroke-width:0;stroke:#354925"/>
     
     <line x1="0" y1="400" x2="600" y2="400" style="stroke:#ffffff;stroke-width:2"/>
     <line x1="0" y1="450" x2="600" y2="450" style="stroke:#ffffff;stroke-width:2"/>
-
+    
 </svg>
